@@ -8,7 +8,7 @@
 
   <Exe comp="-1"/>
 
-  <LastIsn val="24"/>
+  <LastIsn val="27"/>
 
   <LastIsnFolder val="9"/>
 
@@ -43,6 +43,9 @@
   </Folders>
 
 </Header>
+ <DataSourceRepository>
+  <DataObjects>
+ r>
  <DataSourceRepository>
   <DataObjects>
  
@@ -160,19 +163,7 @@
       <Primary val="N"/>
       <Segments>
         <Segment>
-          <Size val="150"/>
-          <Column val="2"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject> 
+          <Size val="150"/> 
 <DataObject Comment="/* General purpose temp table for displaying vectors and other data to the user, and allowing the user to choose and sort the data */" FolderIsn="1" PhysicalName="Temp_Alpha_List" Resident="N" UniqueISNConvState="12" data_source="Memory" id="2" name="Temp Alpha List">
 
   <Encrypt val="N"/>
@@ -305,6 +296,23 @@
       <IndexType val="R"/>
       <HasHint val="Y"/>
       <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject>       <Clustered val="N"/>
       <DropOnReindex val="N"/>
       <Primary val="N"/>
       <Segments>
@@ -595,36 +603,7 @@
           <Order val="A"/>
         </Segment>
       </Segments>
-    </Index>
-    <Index id="4" name="Last Name, first Name">
-      <Mode val="N"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="20"/>
-          <Column val="3"/>
-          <Order val="A"/>
-        </Segment>
-        <Segment>
-          <Size val="20"/>
-          <Column val="2"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject> 
+    </Ind 
 <DataObject Comment="/* A handy table to store many different code translations, for combo boxes or other sets of choices */&#xD;&#xA;&#xD;&#xA;Examples:&#xD;&#xA;&#xD;&#xA;GENDER M  Male &#xD;&#xA;GENDER F   Female &#xD;&#xA;COLOR   Y   Yellow&#xD;&#xA;COLOR   R   Red&#xD;&#xA;COLOR   G   Green&#xD;&#xA;" FolderIsn="2" PhysicalName="Generic_Codes_Table" Resident="N" UniqueISNConvState="12" data_source="Memory" id="4" name="Generic Codes Table">
 
   <Encrypt val="N"/>
@@ -842,6 +821,46 @@
       <Range val="Q"/>
       <IndexType val="R"/>
       <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="5"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="5" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject>  val="Y"/>
       <Clustered val="N"/>
       <DropOnReindex val="N"/>
       <Primary val="N"/>
@@ -1126,7 +1145,7 @@
         <Definition id="175" val="1"/>
         <DbColumnName id="178" val="Attachment_List"/>
         <_Flip id="194"/>
-        <_FieldPhysical Name="Attachment_List" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+        <_FieldPhysic l Name="Attachment_List" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
       </PropertyList>
     </Column>
   </Columns>
@@ -1213,53 +1232,7 @@
         <_Whole id="182" val="6"/>
         <_Negative id="192"/>
         <_Flip id="194"/>
-        <_FieldPhysical PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
-        <_FieldStyle id="276" val="1"/>
-      </PropertyList>
-    </Column>
-    <Column id="2" name="Attachment Location">
-      <PropertyList model="FIELD">
-        <Model attr_obj="FIELD_ALPHA" id="1"/>
-        <Picture id="157" valUnicode="256"/>
-        <StoredAs id="173" val="1"/>
-        <Size id="174" val="256"/>
-        <Definition id="175" val="1"/>
-        <_Flip id="194"/>
-        <_FieldPhysical PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
-      </PropertyList>
-    </Column>
-  </Columns>
-
-  <Indexes>
-    <Index id="1" name="ID, Seq">
-      <Mode val="S"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="100"/>
-          <Column val="1"/>
-          <Order val="A"/>
-        </Segment>
-        <Segment>
-          <Size val="4"/>
-          <Column val="3"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject> 
+        <_FieldPhysical PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231"  
 <DataObject Comment="/* Address Book Header. The main record for each contact */" FolderIsn="3" PhysicalName="Address_Book_Hdr" Resident="N" UniqueISNConvState="12" data_source="OnlineSamples" id="8" name="Address Book Header">
 
   <Encrypt val="N"/>
@@ -1902,6 +1875,63 @@
 
   <WebS/>
 
+</DataObject> Column>
+    <Column id="17" name="Last modified date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Last_modified_date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Last_modified_date" PIC_U="##/##/####" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="18" name="Last modified time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Last_modified_time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Last_modified_time" PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Addr_Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Seq_ADA"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="2"/>
+          <Column val="21"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
 </DataObject> 
 <DataObject FolderIsn="4" PhysicalName="User_Logins" Resident="N" UniqueISNConvState="12" data_source="OnlineSamples" id="11" name="User Logins">
 
@@ -2008,7 +2038,7 @@
         <_Negative id="192"/>
         <_Flip id="194"/>
         <_FieldPhysical Name="NumGroups_USR" PIC_U="3" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
-        <DefaultStorage id="274" val="Y"/>
+        <Def ultStorage id="274" val="Y"/>
         <_FieldStyle id="276" val="1"/>
       </PropertyList>
     </Column>
@@ -2124,7 +2154,7 @@
         <StoredAs id="173" val="3"/>
         <Size id="174" val="130"/>
         <Definition id="175" val="2"/>
-        <DbColumnName id="178" val="User_ID"/>
+        <DbColumnName  d="178" val="User_ID"/>
         <_Flip id="194"/>
         <_FieldPhysical Name="User_ID" PIC_U="130" Size="130" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
         <DefaultStorage id="274" val="Y"/>
@@ -2372,7 +2402,7 @@
     <SchemaField/>
     <SchemaField DataTypeIdx="1"/>
     <SchemaField/>
-    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx "8"/>
     <SchemaField DataTypeIdx="7"/>
     <SchemaField DataTypeIdx="37"/>
     <SchemaField/>
@@ -2744,98 +2774,7 @@
         <Picture id="157" valUnicode="YYYY-MM-DD"/>
         <StoredAs id="173" val="19"/>
         <Size id="174" val="8"/>
-        <Definition id="175" val="2"/>
-        <DbColumnName id="178" val="Last_modified_date12"/>
-        <_FieldPhysical Name="Last_modified_date12" PIC_U="YYYY-MM-DD" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
-        <DefaultStorage id="274" val="Y"/>
-        <XsdType id="292" val="date"/>
-        <Name id="297" val="Last_modified_date"/>
-        <_XsdUnderViewCompound id="423" val="Y"/>
-      </PropertyList>
-    </Column>
-    <Column id="14" name="Last_modified_time">
-      <PropertyList model="FIELD">
-        <Model attr_obj="FIELD_TIME" id="1"/>
-        <Modifiable id="53" val="Y"/>
-        <Picture id="157" valUnicode="HH:MM:SS"/>
-        <StoredAs id="173" val="23"/>
-        <Size id="174" val="4"/>
-        <Definition id="175" val="2"/>
-        <DbColumnName id="178" val="Last_modified_time13"/>
-        <_FieldPhysical Name="Last_modified_time13" PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
-        <DefaultStorage id="274" val="Y"/>
-        <XsdType id="292" val="time"/>
-        <Name id="297" val="Last_modified_time"/>
-        <_XsdUnderViewCompound id="423" val="Y"/>
-      </PropertyList>
-    </Column>
-  </Columns>
-
-  <Indexes>
-    <Index id="1" name="ByNode">
-      <Mode val="S"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <PhysicalName val="ByNode"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="8"/>
-          <Column val="1"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-    <Index id="3" name="Record ID">
-      <Mode val="N"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="20"/>
-          <Column val="3"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-    <Index id="2" name="Last Name">
-      <Mode val="N"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="20"/>
-          <Column val="7"/>
-          <Order val="A"/>
-        </Segment>
-        <Segment>
-          <Size val="20"/>
-          <Column val="6"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject> 
+        < 
 <DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="16" name="Addresses.Phones">
 
   <Encrypt val="N"/>
@@ -2849,6 +2788,8 @@
   <CheckExistence val="D"/>
 
   <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
 
   <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
 
@@ -3075,6 +3016,8 @@
   <CheckExistence val="D"/>
 
   <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
 
   <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
 
@@ -3359,6 +3302,104 @@
 
   <WebS/>
 
+</DataObject> />
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="State7"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="State7" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="State"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Zip">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Zip8"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Zip8" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Zip"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Country">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Country9"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Country9" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Country"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Record ID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="11"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
 </DataObject> 
 <DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="18" name="Addresses.Blobs">
 
@@ -3477,7 +3518,7 @@
         <DefaultStorage id="274" val="Y"/>
         <XsdType id="292" val="string"/>
         <Name id="297" val="Record_ID"/>
-        <_XsdUnderViewCompound id="423"/>
+        <_X dUnderViewCompound id="423"/>
       </PropertyList>
     </Column>
     <Column id="60" name="Seq">
@@ -3561,7 +3602,7 @@
       <IndexType val="R"/>
       <HasHint val="Y"/>
       <Clustered val="N"/>
-      <DropOnReindex val="N"/>
+      <DropOnRein ex val="N"/>
       <Primary val="N"/>
       <Segments>
         <Segment>
@@ -3769,7 +3810,7 @@
         <_Negative id="192"/>
         <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
         <DefaultStorage id="274" val="Y"/>
-      </PropertyList>
+      </Pr pertyList>
     </Column>
     <Column id="10" name="LSeq">
       <PropertyList model="FIELD">
@@ -3870,7 +3911,7 @@
   <WebS/>
 
 </DataObject> 
-<DataObject Comment="/* This data source definition was created automatically, by using Get Definition on the XSD provided by the SOAP service */" FolderIsn="7" PhysicalName="CountryName.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="21" name="CountryInfoService_CountryName">
+<DataObject Comment="/* This data source definition was created automatically, by using Get Definition on the XSD provided by the SOAP service */" F lderIsn="7" PhysicalName="CountryName.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="21" name="CountryInfoService_CountryName">
 
   <Encrypt val="N"/>
 
@@ -3993,7 +4034,7 @@
   <WebS/>
 
 </DataObject> 
-<DataObject Comment="/* This data source definition was created automatically, by using Get Definition on the XSD provided by the SOAP service */" FolderIsn="8" PhysicalName="CountryNameResponse.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="22" name="CountryInfoService_CountryName">
+<DataObject Comment="/* This data source definition was created au omatically, by using Get Definition on the XSD provided by the SOAP service */" FolderIsn="8" PhysicalName="CountryNameResponse.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="22" name="CountryInfoService_CountryName">
 
   <Encrypt val="N"/>
 
@@ -4298,7 +4339,7 @@
     </Column>
     <Column id="11" name="General Request Return Code">
       <PropertyList model="FIELD">
-        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Model attr_obj="FIELD_ALPHA" id="1"/ 
         <Picture id="157" valUnicode="30"/>
         <StoredAs id="173" val="1"/>
         <Size id="174" val="30"/>
@@ -4308,7 +4349,7 @@
       </PropertyList>
     </Column>
     <Column id="12" name="Runtime Return Code">
-      <PropertyList model="FIELD">
+      <PropertyList model="FIEL ">
         <Model attr_obj="FIELD_ALPHA" id="1"/>
         <Picture id="157" valUnicode="30"/>
         <StoredAs id="173" val="1"/>
@@ -4318,7 +4359,7 @@
         <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
       </PropertyList>
     </Column>
-    <Column id="13" name="Runtime engine address and port">
+    <Column id="13" name="Runt me engine address and port">
       <PropertyList model="FIELD">
         <Model attr_obj="FIELD_ALPHA" id="1"/>
         <Picture id="157" valUnicode="30"/>
@@ -4327,117 +4368,6 @@
         <Definition id="175" val="2"/>
         <_Flip id="194"/>
         <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
-      </PropertyList>
-    </Column>
-  </Columns>
-
-  <Indexes>
-    <Index id="1" name="Request ID">
-      <Mode val="S"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="30"/>
-          <Column val="9"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject> 
-<DataObject FolderIsn="9" PhysicalName="Device_ids" Resident="N" UniqueISNConvState="12" data_source="OnlineSamples" id="24" name="Push Notification Device IDs">
-
-  <Encrypt val="N"/>
-
-  <Cache val="D"/>
-
-  <IdentifyRowModifications val="U"/>
-
-  <HasHint val="Y"/>
-
-  <Cursor val="D"/>
-
-  <CheckExistence val="D"/>
-
-  <ObjectType val="T"/>
-
-  <Position val="D"/>
-
-  <IndexesLastIsn val="1"/>
-
-  <Columns>
-    <Column id="2" name="device_OS">
-      <PropertyList model="FIELD">
-        <Model attr_obj="FIELD_ALPHA" id="1"/>
-        <Range id="98" valUnicode="android,ios,win10mobile"/>
-        <Picture id="157" valUnicode="15"/>
-        <StoredAs id="173" val="3"/>
-        <Size id="174" val="15"/>
-        <Definition id="175" val="2"/>
-        <DbColumnName id="178" val="device_OS"/>
-        <_Dec id="181"/>
-        <_Whole id="182"/>
-        <_Negative id="192"/>
-        <_Flip id="194"/>
-        <_FieldPhysical Name="device_OS" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
-        <_FieldStyle id="276" val="1"/>
-      </PropertyList>
-    </Column>
-    <Column id="1" name="device_id">
-      <PropertyList model="FIELD">
-        <Model attr_obj="FIELD_ALPHA" id="1"/>
-        <Picture id="157" valUnicode="255"/>
-        <StoredAs id="173" val="3"/>
-        <Size id="174" val="255"/>
-        <Definition id="175" val="2"/>
-        <DbColumnName id="178" val="device_id"/>
-        <_Flip id="194"/>
-        <_FieldPhysical Name="device_id" PIC_U="255" Size="255" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
-      </PropertyList>
-    </Column>
-  </Columns>
-
-  <Indexes>
-    <Index id="1" name="device_os_id">
-      <Mode val="S"/>
-      <Order val="T"/>
-      <Range val="Q"/>
-      <IndexType val="R"/>
-      <PhysicalName val="device_id"/>
-      <HasHint val="Y"/>
-      <Clustered val="N"/>
-      <DropOnReindex val="N"/>
-      <Primary val="N"/>
-      <Segments>
-        <Segment>
-          <Size val="15"/>
-          <Column val="2"/>
-          <Order val="A"/>
-        </Segment>
-        <Segment>
-          <Size val="255"/>
-          <Column val="1"/>
-          <Order val="A"/>
-        </Segment>
-      </Segments>
-    </Index>
-  </Indexes>
-
-  <ForeignKeys/>
-
-  <WebS/>
-
-</DataObject>  </DataObjects>
+        </DataObjects>
  </DataSourceRepository>
   </Application>
